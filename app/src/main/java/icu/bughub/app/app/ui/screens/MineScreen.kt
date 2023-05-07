@@ -36,7 +36,6 @@ fun MineScreen() {
         MenuItem(R.drawable.points, "学习积分"),
         MenuItem(R.drawable.browser_history, "浏览记录"),
         MenuItem(R.drawable.archives, "学习档案"),
-
         MenuItem(R.drawable.questions, "常见问题"),
         MenuItem(R.drawable.version, "版本信息"),
         MenuItem(R.drawable.settings, "个人设置")

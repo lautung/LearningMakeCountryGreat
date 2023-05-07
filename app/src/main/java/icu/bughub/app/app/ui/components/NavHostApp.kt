@@ -3,6 +3,7 @@ package icu.bughub.app.app.ui.components
 
 import android.util.Log
 import androidx.compose.animation.AnimatedContentScope
+import androidx.compose.animation.AnimatedContentTransitionScope
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.animation.core.tween
 import androidx.compose.runtime.Composable
@@ -47,12 +48,12 @@ fun NavHostApp() {
                     Destinations.HomeFrame.route,
                     enterTransition = {
                         slideIntoContainer(
-                            AnimatedContentScope.SlideDirection.Right
+                            AnimatedContentTransitionScope.SlideDirection.Right
                         )
                     },
                     exitTransition = {
                         slideOutOfContainer(
-                            AnimatedContentScope.SlideDirection.Left
+                            AnimatedContentTransitionScope.SlideDirection.Left
                         )
                     },
                 ) {
@@ -75,10 +76,10 @@ fun NavHostApp() {
                 composable(
                     Destinations.ArticleDetail.route,
                     enterTransition = {
-                        slideIntoContainer(AnimatedContentScope.SlideDirection.Left)
+                        slideIntoContainer(AnimatedContentTransitionScope.SlideDirection.Left)
                     },
                     exitTransition = {
-                        slideOutOfContainer(AnimatedContentScope.SlideDirection.Right)
+                        slideOutOfContainer(AnimatedContentTransitionScope.SlideDirection.Right)
                     },
                 ) {
                     ArticleDetailScreen(onBack = {
@@ -90,10 +91,10 @@ fun NavHostApp() {
                 composable(
                     Destinations.VideoDetail.route,
                     enterTransition = {
-                        slideIntoContainer(AnimatedContentScope.SlideDirection.Left)
+                        slideIntoContainer(AnimatedContentTransitionScope.SlideDirection.Left)
                     },
                     exitTransition = {
-                        slideOutOfContainer(AnimatedContentScope.SlideDirection.Right)
+                        slideOutOfContainer(AnimatedContentTransitionScope.SlideDirection.Right)
                     },
                 ) {
                     VideoDetailScreen(onBack = {
@@ -104,10 +105,10 @@ fun NavHostApp() {
                 composable(
                     Destinations.Login.route,
                     enterTransition = {
-                        slideIntoContainer(AnimatedContentScope.SlideDirection.Left)
+                        slideIntoContainer(AnimatedContentTransitionScope.SlideDirection.Left)
                     },
                     exitTransition = {
-                        slideOutOfContainer(AnimatedContentScope.SlideDirection.Right)
+                        slideOutOfContainer(AnimatedContentTransitionScope.SlideDirection.Right)
                     },
                 ) {
                     LoginScreen {
